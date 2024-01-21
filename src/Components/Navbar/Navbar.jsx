@@ -1,11 +1,17 @@
+import Sidenav from "../sidebar/Sidenav"
 import "../navbar.scss"
-
+import {motion} from "framer-motion"
 const Navbar = () => {
   return (
     <div className= "navbar">
-      {/* Sidebar */}
+      {/* Sidenav */}
+      <Sidenav/>
       <div className="wrapper">
-        <img className="logo" src="/gg.png" alt="logo"></img>
+        <motion.img 
+        initial ={{opacity:0, scale:0.5 }} 
+        animate={{opacity: 1, scale:1}}
+        transition={{duration: 1.5}}
+        className="logo" src="/gg.png" alt="logo"></motion.img>
         <div className="socials">
           <a href="https://github.com/faithadewuyi"><img src = "/github.png"></img></a>
           <a href="https://www.linkedin.com/in/faith-adewuyi-64923542/"><img src = "/linkedin.jpg"></img></a>
