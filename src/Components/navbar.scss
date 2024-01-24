@@ -1,7 +1,7 @@
 .navbar{
   height:100px;
   background-color:  #0c0c1d;
-  // position: relative; 
+  position: relative; 
   
 
   .wrapper {
@@ -18,17 +18,18 @@
       height: 80px;
       margin-top: 20px;
       border-radius: 10px;
-      margin-left: 150px;
+      margin-left: 50px;
      
     }
     .socials{
       display:flex;
-      gap: 20px;
+      gap: 10px;
 
-      img{
-        width: 18px;
+      .fa, .bs{
+        width: 20px;
         height: 17px;
         border-radius: 2px;
+            
       }
     }
   }

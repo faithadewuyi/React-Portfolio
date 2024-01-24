@@ -20,11 +20,28 @@ const textVariants ={
     y: 10,
     transition:{
       duration: 2,
-      
+      repeat: Infinity,
+
 
     }
   }
 };
+// const sliderVariants ={
+//   initial:{
+//     x: 0,
+    
+//   },
+//   animate: {
+//     x: "-220%",
+//       transition:{
+//         repeat: Infinity,
+//         repeatType: "mirror",
+//       duration: 20,
+      
+//     },
+//   },
+  
+// };
 const Hero = () => {
   const handleDownload = () => {
   const link = document.createElement('a');
@@ -42,14 +59,14 @@ const Hero = () => {
           <motion.button variants={textVariants}>Explore my Works</motion.button>
           <motion.button variants={textVariants}onClick={handleDownload}>Download Resume</motion.button>
           </motion.div>
-          <motion.img variants={textVariants}src="/scroll.png"></motion.img>
+          <motion.img variants={textVariants} animate="scrollButton"src="/scroll.png"></motion.img>
       </motion.div>
       </div>
-      <div className="slidingText">
+      {/* <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
         Open Source Contributor
-      </div>
+      </motion.div> */}
       <div className="imageContainer">
-        <img src="heroo.png"></img>
+        <img src="faith.png"></img>
       </div>
     </div>
   )
