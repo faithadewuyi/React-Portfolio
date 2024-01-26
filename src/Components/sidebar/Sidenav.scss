@@ -5,6 +5,7 @@
   justify-content: center;
   color: rgb(151, 132, 24);
   background-color: #fff;
+  
 
   .background{
     position: fixed;
@@ -13,6 +14,7 @@
     bottom: 0;
     width: 300px;
     background: #fff;
+    z-index: 999;
     
     
     .links{
@@ -41,5 +43,6 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
+      z-index: 999;
     }
   }
