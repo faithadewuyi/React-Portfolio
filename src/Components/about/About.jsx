@@ -3,8 +3,9 @@ import "./about.scss"
 const About = () => {
   return (
     <div className="about">
-      <h2>Get to Know Me</h2>
+       <h2>Get to Know Me</h2>
       <div className="aboutMeContainer">
+     
         <div className="aboutMe">
         <div className="aboutImage">
           <img src="./heroo.png"></img>
