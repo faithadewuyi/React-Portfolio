@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a web developer. The portfolio is built using React.js to create an interactive and visually appealing representation of my work.
 
-**Live Demo:** [will be live soon]
+**Live Demo:** [https://faithadewuyi.vercel.app/]
 
 
 ## Features

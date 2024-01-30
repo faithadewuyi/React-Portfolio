@@ -1,11 +1,14 @@
+import { useRef } from 'react';
 import "./projects.scss";
-// import { FaLinkedin, FaGithub } from "react-icons/fa";
+import {  FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
+import {motion, useScroll, useSpring } from "framer-motion"
 
 const items = [
   {
     id: 1,
     title: 'Farm Website',
-    img: '/1.png',
+    img: '/3(2).png',
     description:
       'A fully responsive farm website. Abitim Farms website user-friendly web platform designed to provide visitors with a comprehensive view of the farms products with prices, activities, and values. ',
     stacks: [
@@ -25,7 +28,7 @@ const items = [
   {
     id: 2,
     title: 'Age Calculator',
-    img: '/2.png',
+    img: '/1(2).png',
     description:
       'The Age Calculator is a simple yet effective web application designed to calculate age based on inputed birthdate. This tool provides an intuitive and user-friendly interface for quickly determining age. The project showcases my skills in frontend development and my ability to create practical, user-focused applications.',
     stacks: [
@@ -43,7 +46,7 @@ const items = [
   {
     id: 3,
     title: 'My Portfolio',
-    img: '/3.png',
+    img: '/2(2).png',
     description:
       'A fully responsive and interacive portfolio webiste to show my skills.',
     stacks: [
@@ -68,15 +71,55 @@ const items = [
 
 const Single = ({ item }) => {
 
-    return <section>
-       {item.title}
+    return <section >
+       <div className="container">
+        <div className="wrapper">
+        <img src={item.img} alt=""/>
+        <div className="textContainer">
+          <h2 >{item.title}</h2>
+          <p>{item.description}</p>
+          <span className="stacks">{item.stacks} </span>
+          {/* <div className="links"> */}
+                 <a
+                   className="link"
+                   to={item.live}
+                   rel="noreferrer"
+                   target="_blank"
+                 >
+                   <FaLink color="#bce0fb" />
+                   <span>Live View</span>
+                 </a>
+
+                 <a
+                   className="link"
+                   to={item.gitHub}
+                   rel="noreferrer"
+                   target="_blank"
+                 >
+                   <FaGithub color="#bce0fb" />
+                   <span>View Codes</span>
+                 </a>
+             {/* /div */}
+             </div>
+        </div>
+       </div>
        </section>;
     
 };
 const Projects = () => {
+  const ref = useRef();
+  const {scrollYprogress} = useScroll({target: ref, offset: ["end start", "start start"],});
 
+  const scaleX = useSpring(scrollYprogress,{
+    stiffness: 100,
+    damping: 40,
+  });
   return (
   <div className="projects">
+    <div className="progress">
+      <h1>My Projects</h1>
+      <motion.div style={{scaleX}} className="progressBar"></motion.div>
+    </div>
     {items.map(item=> (
       <Single item={item} key={item.id}/>
     ))}
