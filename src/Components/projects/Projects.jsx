@@ -27,28 +27,10 @@ const items = [
 
   {
     id: 2,
-    title: 'Age Calculator',
-    img: '/1(2).png',
-    description:
-      'The Age Calculator is a simple yet effective web application designed to calculate age based on inputed birthdate. This tool provides an intuitive and user-friendly interface for quickly determining age. The project showcases my skills in frontend development and my ability to create practical, user-focused applications.',
-    stacks: [
-      'HTML ',
-      '|',
-      'CSS ',
-      '|',
-      
-    ],
-    live: 'https://age-calculator-sigma-ten.vercel.app/',
-    gitHub:
-      'https://github.com/faithadewuyiOluwadahunsi/Motivational-Quotes-Generator-Fullstack',
-  },
-
-  {
-    id: 3,
     title: 'My Portfolio',
     img: '/2(2).png',
     description:
-      'A fully responsive and interacive portfolio webiste to show my skills.',
+      'A fully responsive and interacive portfolio webiste to show my skills.aggsgsggsggsgsgsgsgsgsgs',
     stacks: [
       'HTML ',
       '|',
@@ -62,11 +44,66 @@ const items = [
       '|',
       ' Emailjs ',
     ],
-    live: 'https://kodemaven-portfolio.vercel.https://faithadewuyi.vercel.app/',
+    live: 'https://faithadewuyi.vercel.app/',
     gitHub: 'https://github.com/faithadewuyi/React-Portfolio',
   },
 
+  {
+    id: 3,
+    title: 'Scent Dome',
+    img: '/4.png',
+    description:
+      'Working collaboratively, I enhanced my teamwork abilities by contributing to the development of a streamlined two-page eCommerce website. This site was crafted to efficiently and stylishly showcase and sell products.As part of a collaborative team effort, I honed my skills in collaboration to developed a streamlined two-page eCommerce website designed to showcase and sell products with efficiency and style.',
+    stacks: [
+      'HTML ',
+      '|',
+      'CSS ',
+      '|',
+      'Javascript'
+      
+    ],
+    live: 'https://devdivas-assignment-2.netlify.app/',
+    gitHub:
+    'https://github.com/faithadewuyi/DevDivas-Group-Assignment-2.git',
+  },
 
+
+  {
+    id: 4,
+    title: 'Age Calculator',
+    img: '/1(2).png',
+    description:
+      'The Age Calculator is a simple yet effective web application designed to calculate age based on inputed birthdate. This tool provides an intuitive and user-friendly interface for quickly determining age. The project showcases my skills in frontend development and my ability to create practical, user-focused applications.',
+    stacks: [
+      'HTML ',
+      '|',
+      'CSS ',
+      '|',
+      'Javascript'
+      
+    ],
+    live: 'https://age-calculator-sigma-ten.vercel.app/',
+    gitHub:
+    'https://github.com/faithadewuyi/Javascript-Projects.git',
+  },
+  {
+    id: 3,
+    title: 'Boomplay Clone',
+    img: '/5.png',
+    description:
+      'In a team-based project, we developed a Boomplay Clone site to highlight our collaborative skills and teamwork. Through this joint effort, I sharpened my ability to work effectively with others while contributing to the creation website',
+    stacks: [
+      'HTML ',
+      '|',
+      'CSS ',
+      
+      
+    ],
+    live: 'https://boomplayclone.netlify.app/',
+    gitHub:
+    'https://github.com/OreoluwaRasheed/DevDIvas-Month-2-Project/tree/faith',
+  },
+ 
 ];
 
 const Single = ({ item }) => {
@@ -74,15 +111,17 @@ const Single = ({ item }) => {
     return <section >
        <div className="container">
         <div className="wrapper">
+          <div className="imageContainer">
         <img src={item.img} alt=""/>
+        </div>
         <div className="textContainer">
           <h2 >{item.title}</h2>
           <p>{item.description}</p>
           <span className="stacks">{item.stacks} </span>
-          {/* <div className="links"> */}
+           <div className="links"> 
                  <a
                    className="link"
-                   to={item.live}
+                   href={item.live}
                    rel="noreferrer"
                    target="_blank"
                  >
@@ -92,14 +131,14 @@ const Single = ({ item }) => {
 
                  <a
                    className="link"
-                   to={item.gitHub}
+                   href={item.gitHub}
                    rel="noreferrer"
                    target="_blank"
                  >
                    <FaGithub color="#bce0fb" />
                    <span>View Codes</span>
                  </a>
-             {/* /div */}
+             </div >
              </div>
         </div>
        </div>
@@ -129,61 +168,5 @@ const Projects = () => {
 
 export default Projects;
        
-//           <div className="wrapper">
-//             <div className="imageContain">
-//               <img src={item.img} alt="WebsiteImage" />
-//             </div>
-//             <div className="text">
-//               <h2> {item.title} </h2>
-//               <p> {item.description} </p>
-//               <span className="stacks">{item.stacks} </span>
-
-//               <div className="links">
-//                 <Link
-//                   className="link"
-//                   to={item.live}
-//                   rel="noreferrer"
-//                   target="_blank"
-//                 >
-//                   <FontAwesomeIcon icon={faDisplay} color="#bce0fb" />
-//                   <span>Live View</span>
-//                 </Link>
-
-//                 <Link
-//                   className="link"
-//                   to={item.gitHub}
-//                   rel="noreferrer"
-//                   target="_blank"
-//                 >
-//                   <FontAwesomeIcon icon={faGithub} color="#bce0fb" />
-//                   <span>View Codes</span>
-//                 </Link>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     )
-// };
-
-// Single.propTypes = {
-//   item: PropTypes.shape({
-//     id: PropTypes.number.isRequired,
-//     title: PropTypes.string.isRequired,
-//     img: PropTypes.string.isRequired,
-//     description: PropTypes.string.isRequired,
-//     stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
-//     live: PropTypes.string.isRequired,
-//     gitHub: PropTypes.string.isRequired,
-//   }).isRequired,
-// }
-// const Projects = () => {
-//   return (
-//     <div className="projects">
-      
-//     </div>
-    
-//   )
-// }
 
 
