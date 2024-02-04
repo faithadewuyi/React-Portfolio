@@ -20,7 +20,7 @@ const Services = () => {
           <h1>
             and Embracing <b>Open Source</b> 
           </h1>
-          <button>Explore My Skills</button>
+          
         </div>
       </motion.div>
       <div className="listContainer">

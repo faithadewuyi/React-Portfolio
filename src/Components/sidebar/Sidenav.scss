@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .sidenav{
   display: flex;
   flex-direction: column;
@@ -15,6 +17,10 @@
     width: 300px;
     background: #fff;
     z-index: 999;
+
+    @include mobile{
+      width: 200px;
+    }
     
     
     .links{
@@ -25,11 +31,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 30px;
+      
 
-
+     
       a{
         font-size: 40px;
+
+        @include mobile{
+          // margin-top: 20px;
+          font-size: 20px;
+          
+        }
+        @include tablet{
+        font-size: 25px;
+          
+        }
+  
       }
 
     }

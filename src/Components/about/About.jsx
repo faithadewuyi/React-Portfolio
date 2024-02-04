@@ -19,7 +19,7 @@ const About = () => {
         <p> My goal is to contribute to teams in the tech community in meaningful ways, bringing my unique blend of expertise to every challenge. I am open to exploring opportunities in diverse environments, from startups to established companies, where I can continue to grow and make significant contributions.
        </p>
 
-        <a href="" className="btnAbout">Download My Resume</a>
+        {/* <a href="" className="btnAbout">Download My Resume</a> */}
       </div>
     </div>
     </div>

@@ -1,15 +1,27 @@
+@import "../../app.scss";
 .about{
+  background-color: #111132;
   h2{
     text-align: center;
     color: #4db5ff;
     margin: 2rem;
-    font-size: 30px;
+    font-size: 45px;
     font-family: 'roboto', sans-serif;
+
+    @include mobile{
+      margin-top: 3rem;
+      font-size: 20px;
+    }
   }
   .aboutMeContainer{
     display: grid;
     grid-template-columns: 35% 40%;
-    gap: 15%;
+    gap: 18%;
+
+    @include mobile{
+      grid-template-columns: 1fr;
+      gap: 2%;
+    }
    
     .aboutMe{
          margin-top: 3rem;
@@ -36,6 +48,11 @@
       img{
         width: 300px;
         height: 350px;
+
+        @include mobile{
+          width:250px;
+          height: 300px;
+        }
      
   
       }
@@ -59,7 +76,11 @@
             border-radius: 0.4rem;
             border: 1px solid #4db5ff;
             transition: all 400ms ease;
-                     
+                
+            
+            @include mobile{
+              width: 100px;
+            }
             
           &:hover{
             background-color: #151584;
@@ -75,51 +96,16 @@
         margin-bottom: 20px;
         text-align: justify;
         max-width: 600px;
+
+        @include mobile{
+          width: 450px;
+        }
    
       }
 
     }
   }
 
-  @media screen and (max-width:1024px) {
-    
-    .aboutMeContainer{
-      
-      grid-template-columns: 1fr;
-      gap: 1rem;
-
-      .aboutMe{
-        margin: 2rem auto 4rem;
-        width: 50%;
-        
-      }
-      .aboutText{
-        p{
-          margin: 1rem 0 1.5rem;
-        }
-      }
-  }
-}
-  @media screen and (max-width: 600px){
-   
-    .aboutMeContainer{
-      
-       .aboutMe{
-        margin: 2rem auto 4rem;
-        width: 65%;
-        
-      }
-      .aboutText{
-        margin: 0;
-        p{
-          // margin: 1rem 0;
-          width: 320px;
-          margin-bottom: 5px;
-          
-        }
-      }
-  }
- 
   
-}
+  
 }
