@@ -542,16 +542,16 @@
             }
 
              @media screen and (min-width:769px) and (max-width: 1016px) {
-            //     height: 23rem;
-            //     width: 30%;
-            //     border-radius: 10px;
+                height: 23rem;
+                width: 30%;
+                border-radius: 10px;
            }
 
-            // @media screen and (min-width:1017px) and (max-width: 1170px) {
-            //     height: 20rem;
-            //     width: 30%;
-            //     border-radius: 10px;
-            // }
+            @media screen and (min-width:1017px) and (max-width: 1170px) {
+                height: 20rem;
+                width: 30%;
+                border-radius: 10px;
+            }
         }
     }
 }
