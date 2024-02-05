@@ -1,6 +1,8 @@
 @import "../../app.scss";
 .about{
-  background-color: #111132;
+  
+  padding: 2rem 0;
+  // background: linear-gradient(180deg, #0c0c1d, #111132);
   h2{
     text-align: center;
     color: #4db5ff;
@@ -9,49 +11,62 @@
     font-family: 'roboto', sans-serif;
 
     @include mobile{
-      margin-top: 3rem;
-      font-size: 20px;
+      margin-top: 1rem;
+      font-size: 30px;
     }
   }
   .aboutMeContainer{
-    display: grid;
-    grid-template-columns: 35% 40%;
-    gap: 18%;
+    
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: start;
+    padding: 0 2rem;
 
     @include mobile{
-      grid-template-columns: 1fr;
-      gap: 2%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
     }
    
     .aboutMe{
-         margin-top: 3rem;
+      flex-basis: 30%;
+        //  margin-top: 3rem;
          width: 350px;
          aspect-ratio: 1/1;
         border-radius: 2rem;
         background: linear-gradient(45deg, transparent, #4db5ff), transparent;
-        display: grid;
-        place-items: center;
+         display: grid;
+         place-items: center;
         margin-left: 50px;
+
+        @include mobile{
+          width: 200px;
+        }
 
     
     .aboutImage {
        border-radius: 2rem;
-      display: block;
+      // display: block;
       object-fit: cover;
       overflow: hidden;
       transform: rotate(10deg);
+
+      @include mobile{
+        // object-fit: contain;
+      }
       
       &:hover {
         transform: rotate(0deg);
         transition: all 400ms ease
       }
       img{
-        width: 300px;
+       max-width: 100%;
         height: 350px;
 
         @include mobile{
-          width:250px;
-          height: 300px;
+          width: 80%;
+          height: auto;
         }
      
   
@@ -60,45 +75,60 @@
     }
   }
     .aboutText{
-      margin-top: 3rem;
+      flex-basis: 70%;
       display: flex; 
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      text-align: left;
 
-      .btnAbout{
-            width: max-content;
-            display: inline-block;
-            color:#fff;
-            background-color: #4db5ff;
-            padding: 0.75rem 1.2rem;
-            border-radius: 0.4rem;
-            border: 1px solid #4db5ff;
-            transition: all 400ms ease;
+      @include mobile{
+        flex-basis: 60%;
+      }
+
+      // @include mobile{
+      //   padding: 20px;
+      //   margin: 0;
+      //   overflow-y: auto;
+      // }
+
+      // .btnAbout{
+      //       width: max-content;
+      //       display: inline-block;
+      //       color:#fff;
+      //       background-color: #4db5ff;
+      //       padding: 0.75rem 1.2rem;
+      //       border-radius: 0.4rem;
+      //       border: 1px solid #4db5ff;
+      //       transition: all 400ms ease;
                 
             
-            @include mobile{
-              width: 100px;
-            }
+      //       @include mobile{
+      //         width: 100px;
+      //       }
             
-          &:hover{
-            background-color: #151584;
-            border: #111132;
-          }
+      //     &:hover{
+      //       background-color: #151584;
+      //       border: #111132;
+      //     }
 
         
-      }
+      // }
       p{
-        line-height: 1.6;
+        line-height: 1.5;
         font-size: 18px;
         font-family: 'Roboto', sans-serif;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
         text-align: justify;
         max-width: 600px;
 
         @include mobile{
-          width: 450px;
+          width: 400px;
+         text-align: justify;
+         font-size: 16px;
+         margin-bottom: 0.5rem;
+          
+
         }
    
       }
