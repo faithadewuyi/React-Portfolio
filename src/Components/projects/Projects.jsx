@@ -30,7 +30,7 @@ const items = [
     title: 'My Portfolio',
     img: '/2(2).png',
     description:
-      'A fully responsive and interacive portfolio webiste to show my skills.aggsgsggsggsgsgsgsgsgsgs',
+      'This React-based portfolio website is a personal project designed to showcase my development projects, professional experience, and technical skills to potential employers and clients. .',
     stacks: [
       'HTML ',
       '|',
@@ -40,10 +40,7 @@ const items = [
       '|',
       
       ' Framer-Motion ',
-      
-      '|',
-      ' Emailjs ',
-    ],
+         ],
     live: 'https://faithadewuyi.vercel.app/',
     gitHub: 'https://github.com/faithadewuyi/React-Portfolio',
   },

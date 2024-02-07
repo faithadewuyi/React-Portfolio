@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .contact{
   height:100%;
   max-width:1366px;
@@ -5,16 +6,64 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  justify-content: space-evenly;
 
+  @include tablet {
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+}
 
+@include mobile {
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    gap: .5rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+    margin-left: 5rem;
+}
   .textContainer{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 4rem;
+
+    @include tablet {
+      gap: 1rem;
+      align-items: center;
+  }
+
+  @include mobile {
+      gap: 1rem;
+      align-items: center;
+  }
+
 
     h1{
       font-size: 70px;
+
+      @include tablet {
+        font-size: 60px;
+        
+        margin-bottom: 1.5rem;
+    }
+
+    @include mobile {
+        font-size: 50px;
+        line-height: 0;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        font-size: 3.5rem;
+        
+    }
          
     }
    
